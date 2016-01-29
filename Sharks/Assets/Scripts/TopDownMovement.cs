@@ -5,13 +5,11 @@ public class TopDownMovement : MonoBehaviour {
 
 	public float speed;
 
+	public float rotationSpeed;
+
 	void FixedUpdate() {
-		var mousePosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-		Quaternion rot = Quaternion.LookRotation (transform.position - mousePosition,
-			                 Vector3.forward);
-		transform.rotation = rot;
-		transform.eulerAngles = new Vector3 (0, 0, transform.eulerAngles.z);
-		GetComponent<Rigidbody2D>().angularVelocity = 0;
+		float aimingInput = Input.GetAxis ("Horizontal");
+		GetComponent<Rigidbody2D>().angularVelocity = -rotationSpeed * aimingInput;
 
 		float input = Input.GetAxis ("Vertical");
 		GetComponent<Rigidbody2D>().AddForce (gameObject.transform.up * speed * input);
