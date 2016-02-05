@@ -14,11 +14,11 @@ public class TrackBoundary : MonoBehaviour {
 
 		var rigidBody = GetComponent<Rigidbody2D> ();
 		if (distanceFromCenter > outerRadius) {
-			rigidBody.AddForce (-gameObject.transform.position.normalized * barrierHardness * (distanceFromCenter - outerRadius));
+			rigidBody.AddForce (gameObject.transform.position.normalized * barrierHardness * (outerRadius - distanceFromCenter));
 		}
 
 		if (distanceFromCenter < innerRadius) {
-			rigidBody.AddForce (-gameObject.transform.position.normalized * barrierHardness * (innerRadius - distanceFromCenter));
+			rigidBody.AddForce (gameObject.transform.position.normalized * barrierHardness * (innerRadius - distanceFromCenter));
 		}
 	}
 }
