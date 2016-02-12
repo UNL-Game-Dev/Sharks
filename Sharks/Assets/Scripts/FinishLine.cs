@@ -14,8 +14,8 @@ public class FinishLine : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		var lapCounterComponents = other.GetComponents<LapCounter> ();
-		foreach (var lapCounter in lapCounterComponents) {
+		var lapCounter = other.GetComponent<LapCounter> ();
+		if (lapCounter != null) {
 			lapCounter.AddLap ();
 		}
 	}
