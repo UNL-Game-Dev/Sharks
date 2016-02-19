@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 using System.Collections;
 using System;
 
@@ -8,9 +9,7 @@ public class LapCounter : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		laps = new ArrayList<DateTime> {
-			DateTime.UtcNow
-		};
+		laps = new List<DateTime> ();
 	}
 	
 	// Update is called once per frame
@@ -19,7 +18,9 @@ public class LapCounter : MonoBehaviour {
 	}
 
 	public void AddLap() {
-		laps.Add (new DateTime(DateTime.UtcNow));
-		print ("Lap " + currentLap + "!");
+		laps.Add (DateTime.UtcNow);
+		print ("Lap " + laps.Count + "!");
 	}
+
+
 }
