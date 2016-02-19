@@ -25,6 +25,7 @@ public class HoldItem : MonoBehaviour {
 	void DeployItem() {
 		switch (this.item) {
 		case "laser":
+			print ("Deploying Laser");
 			// TODO: Create a laser anchor and laser object
 			break;
 		default:
