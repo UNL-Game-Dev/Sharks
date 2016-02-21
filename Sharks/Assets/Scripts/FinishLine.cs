@@ -19,10 +19,7 @@ public class FinishLine : MonoBehaviour {
 
 		// Only lap if going in the right direction.
 		if (trackDirection > 0) {
-			var lapCounter = other.GetComponent<LapCounter> ();
-			if (lapCounter != null) {
-				lapCounter.AddLap ();
-			}
+			other.SendMessage ("AddLap");
 		}
 	}
 }
