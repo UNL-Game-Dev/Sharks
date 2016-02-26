@@ -12,6 +12,5 @@ public class Pickup : MonoBehaviour
             other.SendMessage("TakeItem", "laser");
             Destroy(gameObject);
         }
-
     }
 }
