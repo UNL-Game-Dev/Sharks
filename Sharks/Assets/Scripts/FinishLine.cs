@@ -21,6 +21,8 @@ public class FinishLine : MonoBehaviour {
 		// Only lap if going in the right direction.
 		if (trackDirection > 0) {
 			other.SendMessage ("AddLap");
+		} else {
+			other.SendMessage ("RemoveLap");
 		}
 	}
 }

@@ -22,5 +22,9 @@ public class LapCounter : MonoBehaviour {
 		print ("Lap " + laps.Count + "!");
 	}
 
-
+	public void RemoveLap() {
+		if (laps.Count > 0) {
+			laps.RemoveAt (laps.Count - 1);
+		}
+	}
 }
