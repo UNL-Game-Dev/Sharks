@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class HoldItem : MonoBehaviour {
-
-	private string item;
+	
+	private GameObject itemPrefab;
 
 	// Use this for initialization
 	void Start () {
@@ -16,21 +16,15 @@ public class HoldItem : MonoBehaviour {
 		}
 	}
 
-	void TakeItem(string item) {
-		if (this.item == null) {
-			this.item = item;
+	void TakeItem(GameObject itemPrefab) {
+		if (this.itemPrefab == null) {
+			this.itemPrefab = itemPrefab;
 		}
 	}
 
 	void DeployItem() {
-		print (string.Format ("Deploying {0}", this.item));
-		switch (this.item) {
-		case "laser":
-			// TODO: Create a laser anchor and laser object
-			break;
-		default:
-			break;
-		}
-		this.item = null;
+		print (string.Format ("Deploying {0}", this.itemPrefab.name));
+		Instantiate (itemPrefab, transform.position, transform.rotation);
+		this.itemPrefab = null;
 	}
 }
