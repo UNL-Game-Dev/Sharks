@@ -20,7 +20,6 @@ public class AutoMovement : MonoBehaviour {
 		float px = gameObject.transform.position.x;
 		float py = gameObject.transform.position.y;
 		float distance = Mathf.Sqrt((px * px) + (py * py));
-		
 
 		float aimingInput;											// whether to turn left or right
 		float angle = gameObject.transform.eulerAngles.z;			// current angle of the shark
