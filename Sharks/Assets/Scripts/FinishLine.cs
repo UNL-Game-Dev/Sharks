@@ -14,6 +14,19 @@ public class FinishLine : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
+
+
+
+
+		if (other.tag == "Player") {
+			other.SendMessage ("TakeItem", "laser");
+			Destroy (gameObject);
+		}
+
+
+
+
+
 		// What direction are we going around the lap?
 		var trackDirection = Vector3.Dot(Vector3.Cross(other.transform.position, other.GetComponent<Rigidbody2D>().velocity), new Vector3(0, 0, 1));
 
