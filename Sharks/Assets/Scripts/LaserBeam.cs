@@ -17,6 +17,6 @@ public class LaserBeam : MonoBehaviour {
 		transform.localRotation = new Quaternion ();
 		var relativePosition = transform.InverseTransformVector (target.transform.position);
 		transform.Rotate (0, 0, Mathf.Atan2(relativePosition.y, relativePosition.x) * 180 / Mathf.PI);
-		transform.localScale = new Vector3(relativePosition.magnitude / 10.0f, 1.0f, 1.0f);
+		transform.localScale = new Vector3 (relativePosition.magnitude / 10.0f, 1.0f, 1.0f);
 	}
 }
