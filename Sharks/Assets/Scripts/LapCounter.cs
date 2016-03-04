@@ -29,4 +29,9 @@ public class LapCounter : MonoBehaviour {
             laps.RemoveAt(laps.Count - 1);
         }
     }
+
+	public int Count()
+	{
+		return laps.Count;
+	}
 }
