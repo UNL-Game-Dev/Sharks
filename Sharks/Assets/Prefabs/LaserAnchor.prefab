@@ -55,7 +55,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d087331e85454906a7f89e4897d77c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserBeamPrefab: {fileID: 116664, guid: 57e985801dc2e4e7f993ef1a24146f45, type: 2}
+  laserBeamPrefab: {fileID: 124846, guid: 57e985801dc2e4e7f993ef1a24146f45, type: 2}
 --- !u!212 &21244260
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -112,7 +112,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: laserBeamPrefab
       value: 
-      objectReference: {fileID: 116664, guid: 57e985801dc2e4e7f993ef1a24146f45, type: 2}
+      objectReference: {fileID: 124846, guid: 57e985801dc2e4e7f993ef1a24146f45, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 153260}

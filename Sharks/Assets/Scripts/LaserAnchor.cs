@@ -8,7 +8,8 @@ public class LaserAnchor : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		print (transform.position);
-		Instantiate (laserBeamPrefab, new Vector3 (0, 0, 0), Quaternion.FromToRotation (new Vector3 (0, 0, 0), transform.position));
+		var laserBeam = (Instantiate (laserBeamPrefab, new Vector3 (0, 0, 0), new Quaternion()) as GameObject).GetComponent<LaserBeam> ();
+		laserBeam.Target (gameObject);
 	}
 	
 	// Update is called once per frame
