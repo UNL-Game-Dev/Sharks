@@ -23,6 +23,10 @@ public class HoldItem : MonoBehaviour {
 	}
 
 	void DeployItem() {
+		if (itemPrefab == null) {
+			return;
+		}
+
 		print (string.Format ("Deploying {0}", this.itemPrefab.name));
 		Instantiate (itemPrefab, transform.position, transform.rotation);
 		this.itemPrefab = null;

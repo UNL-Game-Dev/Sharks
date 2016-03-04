@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections;
 using System;
+using System.Linq;
 
 public class LapCounter : MonoBehaviour {
 
@@ -33,5 +34,44 @@ public class LapCounter : MonoBehaviour {
 	public int Count()
 	{
 		return laps.Count;
+	}
+
+	public TimeSpan? GetFastestLap()
+	{
+		TimeSpan? fastestLap = null;
+		for (var i = 0; i < laps.Count - 1; i++)
+		{
+			var thisLapTime = laps.ElementAt (i + 1) - laps.ElementAt (i);
+			if (fastestLap == null || thisLapTime < fastestLap)
+			{
+				fastestLap = thisLapTime;
+			}
+		}
+
+		return fastestLap;
+	}
+
+	public TimeSpan? GetSlowestLap()
+	{
+		TimeSpan? slowestLap = null;
+		for (var i = 0; i < laps.Count - 1; i++)
+		{
+			var thisLapTime = laps.ElementAt (i + 1) - laps.ElementAt (i);
+			if (slowestLap == null || thisLapTime > slowestLap)
+			{
+				slowestLap = thisLapTime;
+			}
+		}
+
+		return slowestLap;
+	}
+
+	public TimeSpan? GetAverageLap()
+	{
+		if (laps.Count () <= 1) {
+			return null;
+		}
+
+		return new TimeSpan((laps.Last () - laps.First ()).Ticks / (laps.Count () - 1));
 	}
 }
