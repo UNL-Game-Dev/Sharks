@@ -28,7 +28,7 @@ public class HoldItem : MonoBehaviour {
 		}
 
 		print (string.Format ("Deploying {0}", this.itemPrefab.name));
-		Instantiate (itemPrefab, transform.position, transform.rotation);
+		Instantiate (itemPrefab, transform.position + transform.TransformVector(0f, -3f, 0f), transform.rotation);
 		this.itemPrefab = null;
 	}
 }
