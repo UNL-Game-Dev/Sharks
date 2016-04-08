@@ -85,8 +85,6 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
-<<<<<<< HEAD
-=======
 --- !u!1 &261705661
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,7 +211,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 359467347}
->>>>>>> 031c04a... HUD changes
 --- !u!1 &387300063
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,9 +361,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-<<<<<<< HEAD
-  m_RootOrder: 14
-=======
   m_RootOrder: 12
 --- !u!1 &462495468
 GameObject:
@@ -441,7 +435,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 462495468}
->>>>>>> 031c04a... HUD changes
 --- !u!1 &474442490
 GameObject:
   m_ObjectHideFlags: 0
@@ -891,8 +884,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   rotationSpeed: 90
-<<<<<<< HEAD
-=======
 --- !u!114 &1135509412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -904,7 +895,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4861ca222ddd752408cfb9d91d0836d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
->>>>>>> 031c04a... HUD changes
 --- !u!114 &1135509413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1665,7 +1655,6 @@ Transform:
   m_LocalScale: {x: 6.3735495, y: 8.498066, z: 1.2359633}
   m_Children: []
   m_Father: {fileID: 0}
-<<<<<<< HEAD
   m_RootOrder: 6
 --- !u!1001 &2095543538
 Prefab:
@@ -1709,8 +1698,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3c35a9aa73014b138b1e53147ebd49a, type: 2}
   m_IsPrefabParent: 0
-=======
-  m_RootOrder: 4
 --- !u!1 &2123657891
 GameObject:
   m_ObjectHideFlags: 0
@@ -1784,4 +1771,3 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2123657891}
->>>>>>> 031c04a... HUD changes
