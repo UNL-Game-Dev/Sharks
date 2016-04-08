@@ -18,6 +18,6 @@ public class LapDisplay : MonoBehaviour {
 		var lapCounter = lapCounterObject.GetComponent<LapCounter> ();
 		var lapCount = lapCounter.Count ();
 		var text = GetComponent<Text> ();
-		text.text = "Laps: " + lapCount;
+		text.text = "Lap " + lapCount;
 	}
 }
