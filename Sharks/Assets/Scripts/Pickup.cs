@@ -3,13 +3,13 @@ using System.Collections;
 
 public class Pickup : MonoBehaviour
 {
-	public GameObject itemPrefab;
+	public GameObject deployedItem;
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
-            other.SendMessage("TakeItem", itemPrefab);
+            other.SendMessage("TakeItem", deployedItem);
             Destroy(gameObject);
         }
     }
