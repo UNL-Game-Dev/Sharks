@@ -11,6 +11,8 @@ GameObject:
   - 212: {fileID: 21275960}
   - 61: {fileID: 6188824}
   - 114: {fileID: 11417050}
+  - 50: {fileID: 5099572}
+  - 114: {fileID: 11442296}
   m_Layer: 0
   m_Name: LaserAnchorPickup
   m_TagString: Untagged
@@ -30,6 +32,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &5099572
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129534}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0.25
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &6188824
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -55,7 +74,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 790b13ba5cb264e43823e509399ba9f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 153260, guid: 241557ff6c53a4aa1bdb827e997c68c6, type: 2}
+  deployedItem: {fileID: 153260, guid: 241557ff6c53a4aa1bdb827e997c68c6, type: 2}
+--- !u!114 &11442296
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b92e27319a8f6c4ba56502d468a5d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 8
 --- !u!212 &21275960
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -98,6 +129,26 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 40a7a6b0171774d0a8e7f1befe02f910,
         type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LinearDrag
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_AngularDrag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_UseAutoMass
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: lifetime
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 129534}
