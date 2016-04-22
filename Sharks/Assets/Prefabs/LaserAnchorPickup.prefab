@@ -40,8 +40,8 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 129534}
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0.25
+  m_Mass: 0.63
+  m_LinearDrag: 0.35
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_IsKinematic: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b92e27319a8f6c4ba56502d468a5d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 8
+  lifetime: 5.5
 --- !u!212 &21275960
 SpriteRenderer:
   m_ObjectHideFlags: 1

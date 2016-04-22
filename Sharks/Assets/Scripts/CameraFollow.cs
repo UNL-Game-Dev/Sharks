@@ -11,7 +11,7 @@ public class CameraFollow : MonoBehaviour{
     void Start()
     {
         // Calculate the initial offset.
-        offset = transform.position - target.position;
+		offset = Camera.main.ScreenToWorldPoint(new Vector2(Screen.currentResolution.width / 2, Screen.currentResolution.height / 2));
     }
 
     void FixedUpdate()
