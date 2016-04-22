@@ -74,7 +74,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 790b13ba5cb264e43823e509399ba9f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deployedItem: {fileID: 118058, guid: c302963081690463a9ca799f6d0311e4, type: 2}
+  deployedItem: {fileID: 124846, guid: 57e985801dc2e4e7f993ef1a24146f45, type: 2}
+  offsetFromPlayer: {x: 0, y: 2}
+  lifetimeOnDeploy: 0.3
 --- !u!114 &11493568
 MonoBehaviour:
   m_ObjectHideFlags: 1

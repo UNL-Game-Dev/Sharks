@@ -4,6 +4,8 @@ using System.Collections;
 public class HoldItem : MonoBehaviour {
 	
 	private GameObject itemPrefab;
+	private Vector2 offset;
+	private float lifetime;
 
 	// Use this for initialization
 	void Start () {
@@ -16,10 +18,13 @@ public class HoldItem : MonoBehaviour {
 		}
 	}
 
-	void TakeItem(GameObject itemPrefab) {
+	void TakeItem(Pickup pickup) {
 		if (this.itemPrefab == null) {
-			this.itemPrefab = itemPrefab;
+			this.itemPrefab = pickup.deployedItem;
 		}
+
+		this.offset = pickup.offsetFromPlayer;
+		this.lifetime = pickup.lifetimeOnDeploy;
 	}
 
 	void DeployItem() {
@@ -28,7 +33,8 @@ public class HoldItem : MonoBehaviour {
 		}
 
 		print (string.Format ("Deploying {0}", this.itemPrefab.name));
-		Instantiate (itemPrefab, transform.position + transform.TransformVector(0f, -3f, 0f), transform.rotation);
+		var ob = Instantiate (itemPrefab, transform.position + transform.TransformVector (offset.x, offset.y, 0f), transform.rotation) as GameObject;
+		Destroy (ob, lifetime);
 		this.itemPrefab = null;
 	}
 }
